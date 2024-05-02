@@ -1,0 +1,589 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+nav {
+  height: 80px;
+  background-color: white;
+
+}
+
+nav .container {
+  margin: 0;
+  max-width: 1100px;
+
+}
+
+nav .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 px 0 0px;
+  height: 100%
+}
+
+.logo img {
+  width: 14vh;
+  height: auto;
+}
+
+nav .menu ul {
+  display: flex;
+  margin-right: 0vh;
+  margin-left: 11vh;
+  /* margin-top: 3vh; */
+}
+
+nav .menu ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+nav .menu ul li a {
+  text-decoration: none;
+  font-size: 17px;
+  color: black;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+label i {
+  color: black;
+  font-size: 25px;
+}
+
+#checking {
+  display: none;
+}
+
+label {
+  display: none;
+}
+
+.iconss {
+  display: none;
+}
+
+.account {
+  display: flex;
+  gap: 12px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.account li {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp,
+.facebook {
+  display: none;
+}
+
+@media (max-width:600px) {
+
+  .icons {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+
+  nav {
+    height: 70px;
+    background-color: white;
+  }
+
+  nav .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 0px;
+    height: 100%
+  }
+
+
+  li i {
+    width: 3em;
+    height: 3em;
+    margin-top: 6vh;
+    margin-left: .3vh;
+  }
+
+  .logo img {
+    width: 10vh;
+    height: auto;
+  }
+
+  nav .menu ul li a {
+    text-decoration: none;
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+  }
+
+  nav .menu ul {
+    display: flex;
+    margin-right: 20px;
+    /* margin-top: 2vh; */
+  }
+
+  label ul {
+    margin: 0;
+  }
+
+  .account {
+    display: flex;
+    gap: 6px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .account li {
+
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
+
+
+@media (max-width:600px) {
+
+  nav {
+    height: 60px;
+    background-color: white;
+
+  }
+
+  nav .menu ul {
+    position: fixed;
+    top: 80px;
+    left: -140%;
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 400ms;
+  }
+
+  label {
+    display: block;
+  }
+
+  nav .menu ul li {
+    margin: 20px 0;
+  }
+
+  nav .menu ul li a {
+    font-size: 15px;
+  }
+
+  #checking:checked~ul {
+    left: 20%;
+    margin: 0 0 0 0;
+  }
+
+  #checking:checked~label i::before {
+    content: '\f057';
+  }
+
+  .logo img {
+    width: 8vh;
+    height: auto;
+  }
+
+  .fa-solid,
+  .fas {
+    font-weight: 600;
+    margin-right: 6px;
+  }
+
+  .iconss {
+    display: block;
+  }
+
+  .accounts {
+
+    display: block;
+    gap: 6px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .accounts li {
+
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whatsapp,
+  .facebook {
+    display: block;
+  }
+
+  label ul {
+    margin: 0;
+  }
+
+}
+
+
+/* end of navbar */
+
+.banner {
+  position: relative;
+  display: inline-block;
+  /* Ensures that the container only takes up as much width as necessary */
+}
+
+.banner a {
+  text-decoration: none;
+  background: linear-gradient(to right, #080808, #676767);
+  color: white;
+  width: 70vh;
+  height: 9.5vh;
+  margin-bottom: 7vh;
+  margin-left: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* Ensures the image doesn't have any extra space at the bottom */
+}
+
+.button {
+  position: absolute;
+  bottom: 10px;
+  /* Adjust this value to your preference */
+  left: 10px;
+  /* Adjust this value to your preference */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+  .banner a {
+    text-decoration: none;
+    background: linear-gradient(to right, #080808, #676767);
+    color: white;
+    width: 50vh;
+    height: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+
+}
+
+@media (max-width:600px) {
+  .banner a {
+    text-decoration: none;
+    background: linear-gradient(to right, #080808, #676767);
+    color: white;
+    width: 28vh;
+    height: 4vh;
+    margin-bottom: 3vh;
+    margin-left: 0.8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+}
+
+/* end of banner */
+
+.parent-paragraph {
+
+  width: 100%;
+  height: auto;
+  ;
+  background: #b2b2b2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+  margin-top: -4px;
+}
+
+.first-paragraph,
+.second-paragraph,
+.third-paragraph {
+  width: 25%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.first-paragraph,
+.second-paragraph,
+.third-paragraph p {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+
+  .first-paragraph,
+  .second-paragraph,
+  .third-paragraph {
+    width: 25%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .first-paragraph,
+  .second-paragraph,
+  .third-paragraph p {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+  }
+}
+
+@media (max-width:600px) {
+
+  .first-paragraph,
+  .second-paragraph,
+  .third-paragraph {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .first-paragraph,
+  .second-paragraph,
+  .third-paragraph p {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+  }
+}
+
+
+.headercontainer {
+  position: relative;
+  height: 15vh;
+  background-color: #dad6df;
+}
+
+.header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-left: 20vh;
+}
+
+@media (max-width:600px) {
+  .heading {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+
+  .heading {
+    font-size: 35px;
+  }
+}
+
+.card-container {
+  margin-top: -30px;
+  width: 100%;
+  height: 100vh;
+  background-color: #dad6df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 90px;
+}
+
+.card-content-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-content-section .card {
+  flex: 1;
+  margin: 20px 20px;
+
+}
+
+.card-content-section .card img {
+  width: 100%;
+  height: auto;
+}
+
+
+.card-content-section .card h2 {
+  margin: 15px 0px;
+  font-size: 28px;
+  color: #000000;
+  font-size: 15px;
+  text-align: center;
+}
+
+#roomheading {
+  margin: 15px 0px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+#diningheading {
+  margin: 15px 0px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+#poolsheading{
+  margin: 15px 0px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  text-align: right;
+}
+
+
+.card-content-section .card p {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0px 10px;
+  margin-bottom: 20px;
+}
+#roomdes {
+  font-size: 10px;
+  line-height: 1.5;
+  padding: 0px 0px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.parentdining{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.parentpool{
+  display: flex;
+ justify-content: right;
+ align-items: center;
+}
+
+#diningdes{
+  font-size: 10px;
+  line-height: 1.5;
+  padding: 0px 0px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+#poolsdes{
+  font-size: 10px;
+  line-height: 1.5;
+  padding: 0px 0px;
+  margin-bottom: 20px;
+  text-align: right;
+  font-weight: bold;
+}
+#poolbuttons{
+  text-align: right;
+  background-color:black;
+  width:50%;
+  text-align: center;
+  height: 4.5vh;
+}
+#poolbtn {
+  text-decoration: none;
+  color:white;
+  background-color: black;
+  text-align: right;
+  font-size: 12px;
+}
+
+#diningbuttons{
+  background-color:black;
+  width:50%;
+  text-align: center;
+  height: 4.5vh;
+}
+#diningbtn {
+  text-decoration: none;
+  color:white;
+  background-color: black;
+  width:10vh;
+  text-align: right;
+  font-size: 12px;
+}
+
+#roombuttons{
+  text-align: left;
+  background-color: rgb(0, 0, 0);
+  height:4.5vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#roombtn{
+  text-decoration: none;
+  color:white;
+  background-color: black;
+  text-align: right;
+  font-size: 12px;
+}
+
+@media screen and (max-width:768px) {
+  .card-container {
+    height: auto;
+  }
+
+  .card-content-section {
+
+    flex-direction: column;
+  }
+}
